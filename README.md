@@ -1,4 +1,4 @@
-# Zend-lib integration of ZF 1.12 libraries with Codeigniter
+# Zend-lib integration of ZF 1.12 and 2.2 libraries with Codeigniter
 
 ## Requirements
 
@@ -12,7 +12,7 @@
 
 ## Info
 
-Zend-lib is a spark that allows the Zend Framework libraries to be loaded into codeiginiter as additional libraries. The list of libraries available come from the Zend Framework version 1.12.
+Zend-lib is a spark that allows the Zend Framework libraries to be loaded into codeiginiter as additional libraries. The list of libraries available come from the Zend Framework version 1.12 and version 2.2.
 Most of the available libraries have been tested for correct functionality within codeigniter..
 
 ## Usage
@@ -20,6 +20,20 @@ Most of the available libraries have been tested for correct functionality withi
 ### $this->load->spark('my_zend/x.x.x');
 
 To load the my_zend spark..
+
+
+
+## ZF Version 2.2
+
+Version 2.2 of the Zend Framework makes use of PHP 5.3 namespace convention. New in version 2.2 of ZF is the autoload_classmap.php which is script created to load all class in the Zend directory.. I have already run the script and the classmap file is located in the Zend directory. It is an assoc array with class names and location of all Zend classes.. This file can be edited to remove classes from becoming available after calling the ZF_loader().
+
+
+1. $this->my_zend->ZF_Loader();
+2. $my_zf2_class = new Zend\package name\class name i.e.($di = new Zend\Di\Di();)
+
+## ZF Version 1.12
+
+Version 1.12 is also available in the zend_1.12 directory and the my_zend loader has been updated. This directory will be deprecated after further testing has been completed with version 2.2
 
 ### load('Loader');
 

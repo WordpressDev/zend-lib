@@ -12,45 +12,26 @@
  * obtain it through the world-wide-web, please send an email
  * to license@zend.com so we can send you a copy immediately.
  *
- * @category   Zend
- * @package    Zend_Form
- * @subpackage Element
- * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-/** Zend_Form_Element_Submit */
-require_once 'Zend/Form/Element/Submit.php';
+namespace Zend\Form\Element;
+
+use Zend\Form\Element;
 
 /**
- * Button form element
- *
- * @category   Zend
- * @package    Zend_Form
- * @subpackage Element
- * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Button.php 25189 2013-01-08 08:32:43Z frosch $
  */
-class Zend_Form_Element_Button extends Zend_Form_Element_Submit
+class Button extends Element
 {
     /**
-     * Use formButton view helper by default
-     * @var string
-     */
-    public $helper = 'formButton';
-
-    /**
-     * Validate element value (pseudo)
+     * Seed attributes
      *
-     * There is no need to reset the value
-     *
-     * @param  mixed $value Is always ignored
-     * @param  mixed $context Is always ignored
-     * @return boolean Returns always TRUE
+     * @var array
      */
-    public function isValid($value, $context = null)
-    {
-        return true;
-    }
+    protected $attributes = array(
+        'type' => 'button',
+    );
 }

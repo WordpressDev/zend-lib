@@ -24,7 +24,7 @@ define('ZEND_LIB_2', 'Zend/');
 
 define('ZF_VERSION', '1.12');
 
-define('ZEND_LIB_VERSION', '0.0.1');
+define('ZEND_LIB_VERSION', '0.0.2');
 
 define('SPARKS_DIR', '../sparks/');
 
